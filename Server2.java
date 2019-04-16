@@ -17,7 +17,7 @@ public class Server2 {
 		s = ss.accept();
 		ois = new ObjectInputStream(s.getInputStream());
 		oos = new ObjectOutputStream(s.getOutputStream());
-		String palindrome = ""; 
+		String palindrome = "a"; 
 		
 		while (!palindrome.isEmpty()){
 			try {
@@ -25,8 +25,8 @@ public class Server2 {
 				}
 				catch (EOFException e1) {
 					System.exit(0);
-				}	
-		String result = toString(isPalindrome(palindrome)); 
+				}		
+		String result = toString(isPalindrome(palindrome.toLowerCase())); 
 		oos.writeUTF(result);
 		oos.flush(); 
 	
@@ -61,7 +61,7 @@ public class Server2 {
 	}
 
 	private static String filter(String palindrome) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub 
 		StringBuilder build = new StringBuilder(); 
 		for (int i = 0; i < palindrome.length(); i++) {
 			if (Character.isLetterOrDigit(palindrome.charAt(i)))

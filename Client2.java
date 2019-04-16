@@ -6,7 +6,7 @@ import java.net.*;
 
 public class Client2 {
 	static Socket s; //Client socket for connecting to the server
-	static String server = "137.21.142.161"; //Use localhost by default
+	static String server = "localhost"; //Use localhost by default
 	static int serverPort = 1221; //Use port 1221 by default
 	static ObjectOutputStream oos = null;
     static ObjectInputStream ois = null;
