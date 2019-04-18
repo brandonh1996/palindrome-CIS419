@@ -1,5 +1,17 @@
 package palindrome;
 
+/*
+ * Brandon Hettler and Kyle O'Brien
+ * 4/20/2019
+ * CIS 419
+ * The Client class reads in a string
+ * and sends it to the server to check
+ * whether it is a palindrome. The client
+ * then receives the response from
+ * the server and prints out the response. 
+ * The client repeats this until the enter key
+ * is pressed. 
+ */
 import java.io.*;
 import java.net.*;
 
@@ -13,6 +25,8 @@ public class Client2 {
     static BufferedReader br = null;
 	
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
+		//creates a socket with either a default server or
+		//a server through the command line
 		if (args.length < 1) {
 			s = new Socket(server, serverPort);
 		}
