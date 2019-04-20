@@ -1,1 +1,2 @@
-java .\palindrome.Server2
+cd ..
+java palindrome.Server2

@@ -1,1 +1,2 @@
-java .\palindrome.Client2
+cd ..
+java palindrome.Client2
